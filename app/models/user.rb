@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :groups
   has_many :expenses
+
+  validates :name, :email, uniqueness: true
 end
