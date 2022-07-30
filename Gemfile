@@ -30,11 +30,17 @@ gem 'jbuilder'
 # Use Rubocop for code quality
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Use bullet to detect N+1 queries
 gem 'bullet', group: :development
 
+# Use devise for authentication
 gem 'devise'
 
+# Use CanCan for authorization
 gem 'cancancan'
+
+# Use letter_opener to send emails in development
+gem 'letter_opener', group: :development
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
