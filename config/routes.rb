@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :group_expenses
   resources :expenses, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :groups, only: [:index, :show, :new, :create, :edit, :update, :destroy]
