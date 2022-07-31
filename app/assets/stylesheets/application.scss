@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=proxima-nova:thin,extra-light,light,bold,100,200,300,400,500,600,700,800');
+
 $main: #3778c2;
 $second: #5fb523;
 $text: #434654;
+
+$proxima-nova: 'proxima-nova', sans-serif;
+
+body {
+  font-family: $proxima-nova;
+  color: $text;
+}
