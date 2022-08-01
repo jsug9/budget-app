@@ -101,6 +101,17 @@ body {
   background: red;
 }
 
+.splash_buttons {
+  display: flex;
+  width: 95%;
+  gap: 1%;
+
+  a {
+    width: 45%;
+    text-align: center;
+  }
+}
+
 .else_links {
   display: flex;
   justify-content: center;
@@ -209,7 +220,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -221,16 +231,6 @@ body {
     color: $background;
     font-size: 3rem;
     margin: 0;
-  }
-}
-
-.splash_buttons {
-  display: flex;
-  width: 95%;
-  gap: 1%;
-  a {
-    width: 45%;
-    text-align: center;
   }
 }
 

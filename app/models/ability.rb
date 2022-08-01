@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     can :read, User
-  
+
     return unless user.present?
 
     can :manage, Group, user: user
