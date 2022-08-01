@@ -15,11 +15,12 @@ class GroupsController < ApplicationController
   # GET /groups/new
   def new
     @group = Group.new
-    @emojis = ["✈️", "🎮", "📚", "🏥", "🏈", "🎬", "🏠", "🐶", "🍻", "🍔", "🚗", "🖥"]
   end
 
   # GET /groups/1/edit
-  def edit; end
+  def edit
+    @group = Group.find(params[:id])
+  end
 
   # POST /groups or /groups.json
   def create
