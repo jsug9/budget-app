@@ -10,16 +10,18 @@
   FORGOT PASSWORD
 <% end %>
 
-<% if current_page?(new_group_path) %>
-  NEW CATEGORY
-<% end %>
+<% if @group %>
+  <% if @group.id == nil && current_page?(new_group_path) %>
+    NEW CATEGORY
+  <% end %>
 
-<% if @group && current_page?(group_path(@group)) %>
-  CATEGORY
-<% end %>
+  <% if @group.id != nil && current_page?(group_path(@group)) %>
+    CATEGORY
+  <% end %>
 
-<% if @group && current_page?(edit_group_path(@group)) %>
-  EDIT CATEGORY
+  <% if @group.id != nil && current_page?(edit_group_path(@group)) %>
+    EDIT CATEGORY
+  <% end %>
 <% end %>
 
 <% if current_page?(groups_path) || current_page?(root_path) %>

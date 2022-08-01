@@ -131,11 +131,11 @@ body {
   margin-bottom: 5rem;
   width: 100%;
   gap: 1rem;
+}
 
-  a {
-    text-decoration: none;
-    color: $text;
-  }
+.card_link {
+  text-decoration: none;
+  color: $text;
 }
 
 .group_card {
