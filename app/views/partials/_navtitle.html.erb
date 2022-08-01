@@ -1,9 +1,9 @@
 <% if current_page?(new_user_session_path) %>
-  LOGIN
+  LOG IN
 <% end %>
 
 <% if current_page?(new_user_registration_path) %>
-  SIGNUP
+  SIGN UP
 <% end %>
 
 <% if current_page?(new_user_password_path) %>
@@ -24,6 +24,6 @@
   <% end %>
 <% end %>
 
-<% if current_page?(groups_path) || current_page?(root_path) %>
+<% if current_page?(groups_path) %>
   TRANSACTIONS
 <% end %>

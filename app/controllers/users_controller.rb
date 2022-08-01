@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
+  def splash_screen
+    @current_user = current_user
+    authorize! :read, User
+  end
+
   # GET /users or /users.json
   def index
     @users = User.all
