@@ -5,7 +5,7 @@
     <%= render @group %>
   <% end %>
 
-  <div>
-    <%= button_to "Destroy this group", @group, method: :delete %>
+  <div class="actions">
+    <%= button_to "Remove Category", @group, method: :delete, class: "app_button red_button" %>
   </div>
 </div>
