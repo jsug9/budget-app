@@ -18,6 +18,10 @@ body {
   color: $text;
 }
 
+main{
+  padding: 0 1rem;
+}
+
 .menu_ul {
   list-style: none;
   display: flex;
