@@ -1,13 +1,28 @@
 <header>
   <nav>
     <ul class="menu_ul">
-      <li class="menu_li">
         <%= link_to root_path, class:"link_li" do %>
           <span class="iconify" data-icon="bx:menu"></span>
         <% end %>
       </li>
-      <li class="menu_li">TRANSACTIONS</li>
-      <li class="menu_li"><span class="iconify" data-icon="akar-icons:search"></span></li>
+      <li class="menu_li">
+        <%if current_user%>
+          TRANSACTIONS
+        <% else %>
+          <%= render partial: 'partials/navtitle' %>
+        <%end%>
+      </li>
+      <li class="menu_li">
+        <%if current_user%>
+          <%= link_to destroy_user_session_path, method: :delete, class:"link_li" do %>
+            <span class="iconify" data-icon="charm:sign-out"></span>
+          <% end %>
+        <% else %>
+          <%= link_to new_user_session_path, class:"link_li" do %>
+            <span class="iconify" data-icon="charm:sign-in"></span>
+          <% end %>
+        <%end%>
+      </li>
     </ul>
   </nav>
 </header>
