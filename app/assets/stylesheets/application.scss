@@ -104,6 +104,8 @@ body {
 .splash_buttons {
   display: flex;
   width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
   gap: 1%;
 
   a {
