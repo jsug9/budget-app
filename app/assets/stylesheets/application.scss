@@ -117,8 +117,9 @@ body {
   border: none;
   padding: 1.25rem 0;
   cursor: pointer;
-  position:absolute;
-  bottom:0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
   width: 100%;
 }
 
@@ -126,6 +127,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
+  margin-bottom: 5rem;
   width: 100%;
   gap: 1rem;
 
