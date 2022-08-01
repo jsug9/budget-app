@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  
-  resources :group_expenses
-  resources :expenses
-  resources :groups
+
+  resources :groups do
+    resources :expenses
+  end
   resources :users
 
   root 'users#splash_screen'
