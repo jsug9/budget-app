@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=proxima-nova:thin,extra-light,light,bold,100,200,300,400,500,600,700,800');
 
 $main: #3778c2;
+$background: #f1f3f2;
 $second: #5fb523;
 $text: #434654;
 
@@ -16,6 +17,7 @@ html {
 body {
   font-family: $proxima-nova;
   color: $text;
+  background: $background;
 }
 
 // main {
@@ -118,4 +120,29 @@ body {
   position:absolute;
   bottom:0;
   width: 100%;
+}
+
+.categories_list {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 100%;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: $text;
+  }
+}
+
+.group_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
 }

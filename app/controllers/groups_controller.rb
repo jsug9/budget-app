@@ -7,7 +7,9 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    @group = Group.find(params[:id])
+  end
 
   # GET /groups/new
   def new
@@ -20,6 +22,7 @@ class GroupsController < ApplicationController
   # POST /groups or /groups.json
   def create
     @group = Group.new(group_params)
+    @group.author_id = current_user.id
 
     respond_to do |format|
       if @group.save
