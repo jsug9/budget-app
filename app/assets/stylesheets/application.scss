@@ -6,7 +6,38 @@ $text: #434654;
 
 $proxima-nova: 'proxima-nova', sans-serif;
 
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: $proxima-nova;
   color: $text;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+.menu_ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 1rem;
+  background: $main;
+}
+
+.menu_li {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.link_li {
+  color: white;
+  text-decoration: none;
 }
