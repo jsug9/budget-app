@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @group %>
+<div class="category_show">
+  <%= link_to edit_group_path(@group), class:"card_link" do %>
+    <%= render @group %>
+  <% end %>
 
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
-
-  <%= button_to "Destroy this group", @group, method: :delete %>
+  <div class="actions">
+    <%= button_to "Remove Category", @group, method: :delete, class: "app_button red_button" %>
+  </div>
 </div>

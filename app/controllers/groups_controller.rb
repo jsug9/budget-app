@@ -3,11 +3,14 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    # Only show groups that the user is a member of
+    @groups = Group.where(author_id: current_user.id)
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    @group = Group.find(params[:id])
+  end
 
   # GET /groups/new
   def new
@@ -15,11 +18,14 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1/edit
-  def edit; end
+  def edit
+    @group = Group.find(params[:id])
+  end
 
   # POST /groups or /groups.json
   def create
     @group = Group.new(group_params)
+    @group.author_id = current_user.id
 
     respond_to do |format|
       if @group.save
@@ -34,6 +40,7 @@ class GroupsController < ApplicationController
 
   # PATCH/PUT /groups/1 or /groups/1.json
   def update
+    @group = Group.find(params[:id])
     respond_to do |format|
       if @group.update(group_params)
         format.html { redirect_to group_url(@group), notice: 'Group was successfully updated.' }
@@ -47,6 +54,7 @@ class GroupsController < ApplicationController
 
   # DELETE /groups/1 or /groups/1.json
   def destroy
+    @group = Group.find(params[:id])
     @group.destroy
 
     respond_to do |format|

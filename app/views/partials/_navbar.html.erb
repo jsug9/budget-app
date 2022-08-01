@@ -6,11 +6,7 @@
         <% end %>
       </li>
       <li class="menu_li">
-        <%if current_user%>
-          TRANSACTIONS
-        <% else %>
-          <%= render partial: 'partials/navtitle' %>
-        <%end%>
+        <%= render partial: 'partials/navtitle' %>
       </li>
       <li class="menu_li">
         <%if current_user%>
