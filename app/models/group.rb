@@ -4,10 +4,6 @@ class Group < ApplicationRecord
   has_many :expenses, through: :group_expense
 
   def total_amount
-    total = 0
-    expenses.each do |expense|
-      total += expense.amount
-    end
-    total
+    expenses.sum(:amount)
   end
 end
