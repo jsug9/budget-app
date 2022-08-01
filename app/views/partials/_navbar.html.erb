@@ -5,7 +5,13 @@
           <span class="iconify" data-icon="bx:menu"></span>
         <% end %>
       </li>
-      <li class="menu_li">TRANSACTIONS</li>
+      <li class="menu_li">
+        <%if current_user%>
+          TRANSACTIONS
+        <% else %>
+          LOGIN
+        <%end%>
+      </li>
       <li class="menu_li">
         <%if current_user%>
           <%= link_to destroy_user_session_path, method: :delete, class:"link_li" do %>
