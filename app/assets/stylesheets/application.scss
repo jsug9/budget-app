@@ -141,7 +141,7 @@ body {
   align-items: center;
   margin: 0 auto;
   width: 90%;
-  padding: 2rem 1rem;
+  padding: 1.25rem 1rem;
   background: white;
   border-radius: 0.2rem;
   box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
@@ -150,5 +150,9 @@ body {
 .group_card_left {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.category_icon {
+  font-size: 3rem;
 }
