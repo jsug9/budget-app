@@ -14,6 +14,14 @@
   NEW CATEGORY
 <% end %>
 
+<% if @group && current_page?(group_path(@group)) %>
+  CATEGORY
+<% end %>
+
+<% if @group && current_page?(edit_group_path(@group)) %>
+  EDIT CATEGORY
+<% end %>
+
 <% if current_page?(groups_path) || current_page?(root_path) %>
   TRANSACTIONS
 <% end %>
