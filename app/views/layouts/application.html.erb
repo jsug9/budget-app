@@ -12,7 +12,10 @@
   </head>
 
   <body>
-    <%= render partial: 'partials/navbar'%>
+    <% unless current_page?(root_path) %>
+      <%= render partial: 'partials/navbar'%>
+    <% end %>
+  
     <main>
       <%= yield %>
     </main>

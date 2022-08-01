@@ -1,9 +1,15 @@
 <header>
   <nav>
     <ul class="menu_ul">
-        <%= link_to root_path, class:"link_li" do %>
-          <span class="iconify" data-icon="bx:menu"></span>
-        <% end %>
+        <%if current_user%>
+          <%= link_to groups_path, class:"link_li" do %>
+            <span class="iconify" data-icon="bx:menu"></span>
+          <% end %>
+        <% else %>
+          <%= link_to root_path, class:"link_li" do %>
+            <span class="iconify" data-icon="bx:menu"></span>
+          <% end %>
+        <%end%>
       </li>
       <li class="menu_li">
         <%= render partial: 'partials/navtitle' %>
