@@ -9,7 +9,7 @@
         <%if current_user%>
           TRANSACTIONS
         <% else %>
-          LOGIN
+          <%= render partial: 'partials/navtitle' %>
         <%end%>
       </li>
       <li class="menu_li">
