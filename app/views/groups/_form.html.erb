@@ -1,15 +1,15 @@
 <%= form_with(model: group) do |form| %>
 
-  <div>
-    <%= form.text_field :name, value: @group.name, placeholder: "Name", class: "form_field" %>
+  <div class="field">
+    <%= form.text_field :name, value: @group.name, placeholder: "Name", required: true, class: "form_field" %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.select :icon, ["✈️", "🎮", "📚", "🏥", "🏈", "🎬", "🏠", "🐶", "🍻", "🍔", "🚗", "🖥"], value: @group.icon %>
+  <div class="select_icon">
+    <%= form.label :icon, 'Select Icon:', class: "select_icon_label" %>
+    <%= form.select :icon, ["✈️", "🎮", "📚", "🏥", "🏈", "🎬", "🏠", "🐶", "🍻", "🍔", "🚗", "🖥"], value: @group.icon, required: true, class: "select_icon_menu" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="actions">
+    <%= form.submit "Save", class: "green_button" %>
   </div>
 <% end %>

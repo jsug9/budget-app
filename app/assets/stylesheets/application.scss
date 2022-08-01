@@ -63,6 +63,7 @@ body {
 .form_field {
   width: 100%;
   padding: 1rem;
+  font-size: 1rem;
 }
 
 .remember_box {
@@ -165,4 +166,25 @@ body {
   margin: 1rem auto;
   width: 100%;
   gap: 1rem;
+}
+
+.select_icon {
+  display: flex;
+  margin-bottom: 1rem;
+  select {
+    width: 90%;
+    background: white;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+.select_icon_label {
+  width: 10%;
+  background: white;
+  color: #b3b3b3;
+  font-size: 1rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
