@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Expense, type: :model do
   before :each do
     @user = User.create(
       name: 'Augusto',
@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
     )
     @expense = Expense.create(
       author_id: @user.id,
-      name: 'Rent',
+      name: 'Burger',
       amount: 100
     )
   end
