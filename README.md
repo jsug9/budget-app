@@ -5,6 +5,9 @@
 # Live demo
 For a live demo of the project [click here](https://sleepy-mesa-95389.herokuapp.com).
 
+# Live Video
+For a live presentation of the project check this [Loom video](https://www.loom.com/share/f3cf1c9321bc4d1ead4355d1867b453b).
+
 ## Getting Started
 
 To get a local copy of the project, follow these steps: 
