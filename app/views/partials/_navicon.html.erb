@@ -1,0 +1,24 @@
+<%if current_user%>
+  <% if current_page?(groups_path) %>
+    <%= link_to root_path, class:"link_li" do %>
+      <span class="iconify" data-icon="bx:menu"></span>
+    <% end %>
+
+  <% else %>
+    <% if current_page?(edit_group_path(@group)) %>
+      <%= link_to group_path(@group), class:"link_li" do %>
+        <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+      <% end %>
+
+    <% else %>
+      <%= link_to groups_path, class:"link_li" do %>
+        <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
+      <% end %>
+    <% end %>
+  <% end %>
+
+<% else %>
+  <%= link_to root_path, class:"link_li" do %>
+    <span class="iconify" data-icon="bx:menu"></span>
+  <% end %>
+<%end%>
