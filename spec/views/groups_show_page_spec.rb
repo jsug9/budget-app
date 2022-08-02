@@ -24,7 +24,7 @@ RSpec.describe 'Group Show Page', type: :feature do
         amount: 100
       )
     end
-    
+
     visit group_path(@group)
   end
 

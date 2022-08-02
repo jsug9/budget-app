@@ -37,7 +37,7 @@ gem 'devise'
 gem 'cancancan'
 
 # Use letter_opener to send emails in development
-gem "letter_opener"
+gem 'letter_opener'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -82,7 +82,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rails-controller-testing'
 end
