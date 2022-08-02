@@ -7,6 +7,15 @@ $text: #434654;
 
 $proxima-nova: 'proxima-nova', sans-serif;
 
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 *,
 body,
 html {
