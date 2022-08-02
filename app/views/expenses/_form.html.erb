@@ -11,17 +11,15 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.text_field :name, value: @expense.name, placeholder: "Name", required: true, class: "form_field" %>
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
+  <div class="field">
+    <%= form.text_field :amount, value: @expense.amount, placeholder: "Amount", type: "number", required: true, class: "form_field" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="actions">
+    <%= form.submit "Save", class: "app_button green_button margin_button" %>
   </div>
 <% end %>
