@@ -30,14 +30,14 @@ gem 'jbuilder'
 # Use Rubocop for code quality
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-# Use bullet to detect N+1 queries
-gem 'bullet', group: :development
-
 # Use devise for authentication
 gem 'devise'
 
 # Use CanCan for authorization
 gem 'cancancan'
+
+# Use letter_opener to send emails in development
+gem 'letter_opener'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -63,6 +63,9 @@ gem 'sass-rails'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
+  # Use bullet to detect N+1 queries
+  gem 'bullet'
 end
 
 group :development do
@@ -79,6 +82,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end

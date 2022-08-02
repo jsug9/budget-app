@@ -25,8 +25,6 @@
       <% end %>
     <% end %>
 
-    
-
     <% if @expense && @group %>
       <% if @expense.id == nil && current_page?(new_group_expense_path(@group)) %>
         <%= link_to group_path(@group), class:"link_li" do %>

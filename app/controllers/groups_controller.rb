@@ -50,6 +50,8 @@ class GroupsController < ApplicationController
 
   # DELETE /groups/1 or /groups/1.json
   def destroy
+    @expenses = @group.expenses
+    @expenses.each(&:destroy)
     @group.destroy
 
     respond_to do |format|
