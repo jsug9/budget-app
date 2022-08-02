@@ -204,7 +204,6 @@ body {
   margin-bottom: 1rem;
 
   select {
-    width: 90%;
     background: white;
     border: none;
     font-size: 1rem;
@@ -213,7 +212,6 @@ body {
 }
 
 .select_icon_label {
-  width: 10%;
   background: white;
   color: #b3b3b3;
   font-size: 1rem;
@@ -279,6 +277,16 @@ body {
   .app_icon {
     width: 70%;
   }
+
+  .select_icon {
+    select {
+      width: 70%;
+    }
+  }
+  
+  .select_icon_label {
+    width: 30%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -288,5 +296,15 @@ body {
 
   .splash_screen {
     padding: 3rem 0;
+  }
+
+  .select_icon {
+    select {
+      width: 85%;
+    }
+  }
+  
+  .select_icon_label {
+    width: 15%;
   }
 }
