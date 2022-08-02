@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[show edit update destroy]
-  before_action :set_group, only: %i[new index create show edit update destroy]
+  before_action :set_group, only: %i[new index create show edit destroy]
 
   # GET /expenses or /expenses.json
   def index
@@ -36,6 +36,7 @@ class ExpensesController < ApplicationController
 
   # PATCH/PUT /expenses/1 or /expenses/1.json
   def update
+    @group = Group.find(params[:id])
     respond_to do |format|
       if @expense.update(expense_params)
         format.html { redirect_to @group, notice: 'Expense was successfully updated.' }
@@ -65,7 +66,7 @@ class ExpensesController < ApplicationController
   end
 
   def set_group
-    @group = Group.find(params[:id])
+    @group = Group.find(params[:group_id])
   end
 
   # Only allow a list of trusted parameters through.
