@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   end
 
   resources :groups do
-    resources :expenses
+    resources :expenses do
+    end
   end
+
   resources :users
 
   root 'users#splash_screen'
