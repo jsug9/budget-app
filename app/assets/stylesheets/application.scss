@@ -38,6 +38,7 @@ body {
 .menu_li {
   color: white;
   font-size: 1.2rem;
+
   p {
     font-weight: bold;
   }
@@ -189,14 +190,6 @@ body {
   font-size: 3rem;
 }
 
-.category_show {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  width: 100%;
-  gap: 1rem;
-}
-
 .select_icon {
   display: flex;
   margin-bottom: 1rem;
@@ -240,6 +233,12 @@ body {
 }
 
 .category_show {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 100%;
+  gap: 1rem;
+
   h2 {
     padding: 0 2rem;
   }
