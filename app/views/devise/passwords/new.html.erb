@@ -1,0 +1,17 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form_field", required: true %>
+  </div>
+
+  <br/>
+
+  <div class="actions">
+    <%= f.submit "Send me reset password instructions", class: "app_button green_button" %>
+  </div>
+<% end %>
+
+<div class="else_links">
+  <%= render "devise/shared/links" %>
+</div>
