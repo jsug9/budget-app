@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_group, only: %i[show edit update destroy]
 
   # GET /groups or /groups.json
   def index
@@ -8,9 +9,7 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1 or /groups/1.json
-  def show
-    @group = Group.find(params[:id])
-  end
+  def show; end
 
   # GET /groups/new
   def new
@@ -18,9 +17,7 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1/edit
-  def edit
-    @group = Group.find(params[:id])
-  end
+  def edit; end
 
   # POST /groups or /groups.json
   def create
@@ -40,7 +37,6 @@ class GroupsController < ApplicationController
 
   # PATCH/PUT /groups/1 or /groups/1.json
   def update
-    @group = Group.find(params[:id])
     respond_to do |format|
       if @group.update(group_params)
         format.html { redirect_to group_url(@group), notice: 'Group was successfully updated.' }
@@ -54,7 +50,6 @@ class GroupsController < ApplicationController
 
   # DELETE /groups/1 or /groups/1.json
   def destroy
-    @group = Group.find(params[:id])
     @group.destroy
 
     respond_to do |format|
