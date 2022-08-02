@@ -8,9 +8,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <% unless current_page?(root_path) %>
+      <%= render partial: 'partials/navbar'%>
+    <% end %>
+  
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

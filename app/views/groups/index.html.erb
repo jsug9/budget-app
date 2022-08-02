@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="cards_list">
+  <% @groups.each do |group| %>
+    <%= link_to group, class:"card_link" do %>
+      <%= render group %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "New Category", new_group_path, class: "category_button" %>

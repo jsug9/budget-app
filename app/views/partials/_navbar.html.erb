@@ -1,0 +1,23 @@
+<header>
+  <nav>
+    <ul class="menu_ul">
+      <li class="menu_li">
+        <%= render partial: 'partials/navicon' %>
+      </li>
+      <li class="menu_li">
+        <p><%= render partial: 'partials/navtitle' %></p>
+      </li>
+      <li class="menu_li">
+        <%if current_user%>
+          <%= link_to destroy_user_session_path, method: :delete, class:"link_li" do %>
+            <span class="iconify" data-icon="charm:sign-out"></span>
+          <% end %>
+        <% else %>
+          <%= link_to new_user_session_path, class:"link_li" do %>
+            <span class="iconify" data-icon="charm:sign-in"></span>
+          <% end %>
+        <%end%>
+      </li>
+    </ul>
+  </nav>
+</header>

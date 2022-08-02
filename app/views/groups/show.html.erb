@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="category_show">
+  <%= link_to edit_group_path(@group), class:"card_link" do %>
+    <%= render @group %>
+  <% end %>
+
+  <div class="actions">
+    <%= button_to "Remove Category", @group, method: :delete, class: "app_button red_button" %>
+  </div>
+
+  <h2>Expenses</h2>
+
+  <div class="cards_list">
+    <%= render @group.expenses.order(created_at: :desc) %>
+  </div>
+
+  <%= link_to "New Expense", new_group_expense_path(@group), class: "category_button" %>
+</div>
