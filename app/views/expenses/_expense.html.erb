@@ -1,4 +1,6 @@
-<div class="group_card">
-  <p><%= expense.name %></p>
-  <p>$ <%= expense.amount %></p>
-</div>
+ <%= link_to edit_group_expense_path(expense), class:"card_link" do %>
+  <div class="group_card">
+    <p><%= expense.name %></p>
+    <p>$ <%= expense.amount %></p>
+  </div>
+<% end %>
