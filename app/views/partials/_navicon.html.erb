@@ -7,7 +7,7 @@
   <% else %>
     <% if @group %>
       <% if @group.id == nil && current_page?(new_group_path) %>
-        <%= link_to group_path(@group), class:"link_li" do %>
+        <%= link_to groups_path, class:"link_li" do %>
           <span class="iconify" data-icon="eva:arrow-ios-back-outline"></span>
         <% end %>
       <% end %>
