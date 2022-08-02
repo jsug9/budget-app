@@ -38,6 +38,10 @@ body {
 .menu_li {
   color: white;
   font-size: 1.2rem;
+
+  p {
+    font-weight: bold;
+  }
 }
 
 .link_li {
@@ -150,7 +154,7 @@ body {
   width: 100%;
 }
 
-.categories_list {
+.cards_list {
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
@@ -184,14 +188,6 @@ body {
 
 .category_icon {
   font-size: 3rem;
-}
-
-.category_show {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  width: 100%;
-  gap: 1rem;
 }
 
 .select_icon {
@@ -236,9 +232,31 @@ body {
   }
 }
 
+.category_show {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 100%;
+  gap: 1rem;
+
+  h2 {
+    padding: 0 2rem;
+  }
+}
+
 .app_icon {
   margin: 0 auto;
   margin-top: 3rem;
+}
+
+.actions_expense {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 100%;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {

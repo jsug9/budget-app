@@ -24,6 +24,16 @@
   <% end %>
 <% end %>
 
+<% if @expense && @group %>
+  <% if @expense.id == nil && current_page?(new_group_expense_path(@group)) %>
+    NEW EXPENSE
+  <% end %>
+
+  <% if @expense.id != nil && current_page?(edit_group_expense_path(@group, @expense)) %>
+    EDIT EXPENSE
+  <% end %>
+<% end %>
+
 <% if current_page?(groups_path) %>
   TRANSACTIONS
 <% end %>
