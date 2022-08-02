@@ -19,7 +19,10 @@
     <%= form.text_field :amount, value: @expense.amount, placeholder: "Amount", type: "number", required: true, class: "form_field" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit "Save", class: "app_button green_button margin_button" %>
+  <div class="actions_expense">
+    <%= form.submit "Save", class: "app_button green_button" %>
+    <% if @expense.id != nil && current_page?(edit_group_expense_path(@group, @expense)) %>
+      <%= button_to "Delete expense", group_expense_path(@group, @expense), method: :delete, class: "app_button red_button" %>
+    <% end %>
   </div>
 <% end %>

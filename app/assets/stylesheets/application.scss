@@ -244,13 +244,19 @@ body {
   }
 }
 
-.margin_button {
-  margin-top: 1rem;
-}
-
 .app_icon {
   margin: 0 auto;
   margin-top: 3rem;
+}
+
+.actions_expense {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 100%;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
