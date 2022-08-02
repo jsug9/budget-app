@@ -31,7 +31,7 @@ gem 'jbuilder'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use bullet to detect N+1 queries
-gem 'bullet', group: :development
+gem 'bullet'
 
 # Use devise for authentication
 gem 'devise'
