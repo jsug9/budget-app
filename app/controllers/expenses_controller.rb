@@ -1,9 +1,10 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[show edit update destroy]
+  before_action :set_group, only: %i[new index create show edit update destroy]
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    @expenses = @group.expenses
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -19,12 +20,12 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = Expense.new(expense_params)
-    @expense.group = Group.find(params[:group_id])
+    @expense = @group.expenses.new(expense_params)
+    @expense.author_id = current_user.id
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
+        format.html { redirect_to @group, notice: 'Expense was successfully created.' }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -61,6 +62,10 @@ class ExpensesController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_expense
     @expense = Expense.find(params[:id])
+  end
+
+  def set_group
+    @group = Group.find(params[:group_id])
   end
 
   # Only allow a list of trusted parameters through.

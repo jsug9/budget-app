@@ -11,10 +11,7 @@
 
   <h2>Expenses</h2>
 
-  <div class="group_card">
-    <p>Test</p>
-    <p>$ 0.0</p>
-  </div>
+  <%= render @group.expenses %>
 
   <%= link_to "New Expense", new_group_expense_path(@group), class: "category_button" %>
 </div>
