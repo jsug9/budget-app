@@ -3,7 +3,7 @@
 > The Budget App is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 # Live demo
-For a live demo of the project [click here](). - Not available yet
+For a live demo of the project [click here](https://sleepy-mesa-95389.herokuapp.com).
 
 ## Getting Started
 
