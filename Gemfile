@@ -39,6 +39,9 @@ gem 'devise'
 # Use CanCan for authorization
 gem 'cancancan'
 
+# Use letter_opener to send emails in development
+gem "letter_opener"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
