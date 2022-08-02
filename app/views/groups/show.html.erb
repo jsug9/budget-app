@@ -12,7 +12,7 @@
   <h2>Expenses</h2>
 
   <div class="cards_list">
-    <%= render @group.expenses %>
+    <%= render @group.expenses.order(created_at: :desc) %>
   </div>
 
   <%= link_to "New Expense", new_group_expense_path(@group), class: "category_button" %>
