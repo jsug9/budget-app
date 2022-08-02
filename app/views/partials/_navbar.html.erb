@@ -3,7 +3,7 @@
     <ul class="menu_ul">
         <%if current_user%>
           <% if current_page?(groups_path) %>
-            <%= link_to groups_path, class:"link_li" do %>
+            <%= link_to root_path, class:"link_li" do %>
               <span class="iconify" data-icon="bx:menu"></span>
             <% end %>
           <% else %>
