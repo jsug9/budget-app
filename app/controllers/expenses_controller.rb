@@ -1,12 +1,6 @@
 class ExpensesController < ApplicationController
-  before_action :set_group, only: %i[new index create show edit update destroy]
-  before_action :set_expense, only: %i[show edit update destroy]
-
-  # GET /expenses or /expenses.json
-  def index; end
-
-  # GET /expenses/1 or /expenses/1.json
-  def show; end
+  before_action :set_group, only: %i[new create edit update destroy]
+  before_action :set_expense, only: %i[edit update destroy]
 
   # GET /expenses/new
   def new
